@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    animation: fadeIn 10s;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-image: url("resources/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 1.5s;
+    
+}
+
+button:focus {
+    outline: none;
+}
+
+
+
+.book {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    transition: transform 1.5s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front {
+    backface-visibility: hidden;
+    border: 1.5px solid lightblue;
+    
+    
+}
+.back {
+    border: 1.5px solid lightblue;
+}
+
+.front, 
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left;
+    transition: transform 1.5s;
+}
+
+.front {
+    z-index: 1;
+    
+}
+
+.back {
+    z-index: 0;
+    background-color: white;
+    
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+
+}
+
+
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+    border-left: none;
+}
+
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+
+.book-title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: '8BITWONDERNominal';
+    font-weight: lighter;
+    font-style: normal;
+    color: black;
+    padding-top: 50px;
+    text-shadow: -2px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+   
+}
+
+.book-footer{
+    font-size: .5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: '8BITWONDERNominal';
+    font-weight: lighter;
+    font-style: normal;
+    text-shadow: -2px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    
+}
+.cover-img {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+    mix-blend-mode: multiply;
+}
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+}
+
+#b1 h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 50px;
+    text-shadow: -2px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#b1 p {
+    justify-content: center;
+    margin-bottom: 20px;
+    text-shadow: -1px 0 white, 0 0px white, 1px 0 white, 0 0px white;
+}
+
+#prev-btn{
+    visibility: hidden;
+}
+
+.next{
+    transform: rotate(90deg);
+    width:70px;
+    height: 70px;
+}
+
+.prev{
+    transform: rotate(-90deg);
+    width:70px;
+    height: 70px;
+}
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+
+.coverpage {
+    background-image: url("/resources/paper_background.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:lighten;
+}
+
+#f2 {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: '8BITWONDERNominal';
+    font-weight: lighter;
+    font-style: normal;
+    color: white;
+    text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-top: 5px;
+}
+
+.aud:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.noshake:hover {
+    animation: none;
+}
+.ganyu {
+    height: 312px;
+}
+
+
+.back_front {
+    background-image: url("/resources/paper_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.lastpage {
+    background-image: url("/resources/inazuma_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+
+a:visited, a:link{
+    color: black;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(8px 8px 8px rgb(184, 184, 68))
+    }
+    to {
+        filter: drop-shadow(3px 3px 3px red);
+    }
+
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
