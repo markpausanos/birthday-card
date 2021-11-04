@@ -5,30 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy 20th Birthday!</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css"/>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
-    <script defer src="./main.js"></script>
+    <script defer src="main.js"></script>
 </head>
 <body>
     <audio id="main_theme" autoplay loop="loop" visibility: hidden; position: relative; width: 0; height: 0>
-        <source src="/resources/dawn_winery.mp3" type="audio/mp3">
+        <source src="resources/dawn_winery.mp3" type="audio/mp3">
     </audio>
     <audio id="zhongli">
-        <source src="/resources/VO_Zhongli_Birthday.ogg" type="audio/ogg">
+        <source src="resources/VO_Zhongli_Birthday.ogg" type="audio/ogg">
     </audio>
     <audio id="klee">
-        <source src="/resources/VO_Klee_Birthday.ogg" type="audio/ogg">
+        <source src="resources/VO_Klee_Birthday.ogg" type="audio/ogg">
     </audio>
     <audio id="ganyu">
-        <source src="/resources/VO_Ganyu_Birthday.ogg" type="audio/ogg">
+        <source src="resources/VO_Ganyu_Birthday.ogg" type="audio/ogg">
     </audio>
     <audio id="secretmessage">
-        <source src="/resources/secretmessage.mp3" type="audio/mp3">
+        <source src="resources/secretmessage.mp3" type="audio/mp3">
     </audio>
     
     <button id="prev-btn">
-        <img class="prev glow" src="/resources/button.png">
+        <img class="prev glow" src="resources/button.png">
     </button>
 
 
@@ -39,7 +39,7 @@
                 <div id="f1" class="front-content">
                     <h1 class="book-title">Happy Birthday</h1>
                     <a id="cake" onclick="playAudio('klee'); noshake('#cake');"  style="cursor: pointer;  mix-blend-mode: multiply;">
-                        <img class="cover-img" src="/resources/cake_animation.gif" alt="cake">
+                        <img class="cover-img" src="resources/cake_animation.gif" alt="cake">
                     </a>
                     <h2 class="book-footer" onclick="playAudio('main_theme')"> To you, from Mark</h2>
                 </div>
@@ -62,7 +62,7 @@
             <div class="front lastpage">
                 <div id="f2" class="front-content">
                     <h1 id="f2">Find and Click 3 Shaking Objects!</h1>
-                    <h1 class="aud" id= "aud2" style= "cursor: pointer;"><a onclick="playAudio('ganyu') ; noshake('#aud2');"><img class="ganyu" src="/resources/ganyu.gif"></a></h1>
+                    <h1 class="aud" id= "aud2" style= "cursor: pointer;"><a onclick="playAudio('ganyu') ; noshake('#aud2');"><img class="ganyu" src="resources/ganyu.gif"></a></h1>
                 </div>
             </div>
             <div class="back">
@@ -74,7 +74,7 @@
     </div>
 
     <button id="next-btn">
-        <img class="next glow" src="/resources/button.png">
+        <img class="next glow" src="resources/button.png">
     </button>
 
 

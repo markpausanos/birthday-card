@@ -192,7 +192,7 @@ button:focus {
   
 
 .coverpage {
-    background-image: url("/resources/paper_background.gif");
+    background-image: url("resources/paper_background.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -224,13 +224,13 @@ button:focus {
 
 
 .back_front {
-    background-image: url("/resources/paper_background.png");
+    background-image: url("resources/paper_background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .lastpage {
-    background-image: url("/resources/inazuma_background.jpg");
+    background-image: url("resources/inazuma_background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
