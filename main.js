@@ -86,7 +86,6 @@ function playAudio(x){
 function playMaintheme(){ //plays theme
     maintheme.play();
     maintheme.onended = function(){
-        maintheme.volume = 1;
         playMaintheme();
     }
 }
