@@ -1,4 +1,4 @@
-// References to DOM elements
+
 const prevBtn = document.querySelector('#prev-btn');
 const nextBtn = document.querySelector('#next-btn');
 const book = document.querySelector('#book');
@@ -7,12 +7,13 @@ const paper1 = document.querySelector('#p1')
 const paper2 = document.querySelector('#p2')
 const cake = document.querySelector("#cake")
 
-// Event listeners
+const maintheme = document.getElementById("main_theme")
+
 prevBtn.addEventListener("click", cardOpen);
 nextBtn.addEventListener("click", cardClose);
 
-document.addEventListener("DOMContentLoaded", function() {
-    playAudio("main_theme");
+document.addEventListener("DOMContentLoaded", function() { //autoplay supposedly on load
+    playMaintheme();
 });
 
 
@@ -51,9 +52,14 @@ function cardOpen() {
           
 }
 
+var prev = maintheme; //ensure that if another audio plays, the previous audio stops
 function playAudio(x){
-    maintheme = document.getElementById("main_theme")
+    
+    if(prev!= maintheme){
+        prev.pause();
+    }
     audio = document.getElementById(x)
+    prev = audio;
     origvolume = maintheme.volume;
     if(audio === maintheme){
         maintheme.vol = 1;
@@ -62,7 +68,8 @@ function playAudio(x){
     }
     maintheme.volume = 0.3;
     audio.play();
-    audio.onended = function(){
+    prevaudio = audio;
+    audio.onended = function(){  // adds fade in audio
         tempvol = 0.3
         var interval = setInterval(function(){
             tempvol += 0.05;
@@ -76,7 +83,15 @@ function playAudio(x){
     }
 }
 
-function noshake(x){
+function playMaintheme(){ //plays theme
+    maintheme.play();
+    maintheme.onended = function(){
+        maintheme.volume = 1;
+        playMaintheme();
+    }
+}
+
+function noshake(x){ //removes shake once clicked
     const removeshake = document.querySelector(x);
     removeshake.classList.add("noshake");
 }
