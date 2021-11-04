@@ -26,3 +26,6 @@ Here take it.
                          **************%%%*************                      
                                                                                 
                                                                           
+
+---Troubleshooting---
+If there is no audio on open, please refresh page 3 times until it autoplays. If it still does not, please press "To you" on the cover page.
