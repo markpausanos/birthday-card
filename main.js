@@ -8,6 +8,7 @@ const paper2 = document.querySelector('#p2')
 const cake = document.querySelector("#cake")
 
 const maintheme = document.getElementById("main_theme")
+const secretmessage = document.getElementById("secretmessage")
 
 prevBtn.addEventListener("click", cardOpen);
 nextBtn.addEventListener("click", cardClose);
@@ -34,6 +35,7 @@ function cardClose() {
     
     openCard();
     cake.classList.add("aud");
+    cake.style.cursor = "pointer";
     paper1.classList.add("flipped");
     nextBtn.style.visibility ="hidden";
     prevBtn.style.visibility = "visible";
@@ -57,6 +59,7 @@ function playAudio(x){
     
     if(prev!= maintheme){
         prev.pause();
+        prev.currentTime = 0;
     }
     audio = document.getElementById(x)
     prev = audio;
@@ -66,20 +69,14 @@ function playAudio(x){
         audio.play();
         return;
     }
-    maintheme.volume = 0.3;
+    if(audio === secretmessage){
+        maintheme.volume = 0.2;
+    }else{
+        maintheme.volume = 0.5;
+    }
     audio.play();
-    prevaudio = audio;
-    audio.onended = function(){  // adds fade in audio
-        tempvol = 0.3
-        var interval = setInterval(function(){
-            tempvol += 0.05;
-            if(tempvol <= 1){
-                maintheme.volume = tempvol;
-            }
-            if(tempvol > origvolume || tempvol >= 1 ){
-                clearInterval(interval)
-            }
-        }, 1000);
+    audio.onended = function(){ 
+        maintheme.volume = 1;
     }
 }
 
