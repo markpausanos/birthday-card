@@ -8,7 +8,7 @@ const paper2 = document.querySelector('#p2')
 const cake = document.querySelector("#cake")
 
 const maintheme = document.getElementById("main_theme")
-const secretmessage = document.getElementById("secretmessage")
+const message = document.getElementById("my_sunbeam")
 
 prevBtn.addEventListener("click", cardOpen);
 nextBtn.addEventListener("click", cardClose);
@@ -69,8 +69,8 @@ function playAudio(x){
         audio.play();
         return;
     }
-    if(audio === secretmessage){
-        maintheme.volume = 0.2;
+    if(audio === message){
+        maintheme.volume = 0.7;
     }else{
         maintheme.volume = 0.5;
     }

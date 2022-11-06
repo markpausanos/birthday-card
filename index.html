@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 20th Birthday!</title>
+    <title>Happy 21th Birthday!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/8bit-wonder" type="text/css"/>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
@@ -12,21 +12,14 @@
 </head>
 <body>
     <audio id="main_theme" autoplay visibility: hidden; position: relative; width: 0; height: 0>
-        <source src="resources/dawn_winery.mp3" type="audio/mp3">
-    </audio>
-    <audio id="zhongli">
-        <source src="resources/VO_Zhongli_Birthday.ogg" type="audio/ogg">
+        <source src="resources/enchanting_bedtime_stories.mp3" type="audio/mp3">
     </audio>
     <audio id="klee">
         <source src="resources/VO_Klee_Birthday.ogg" type="audio/ogg">
     </audio>
-    <audio id="ganyu">
-        <source src="resources/VO_Ganyu_Birthday.ogg" type="audio/ogg">
+    <audio id="my_sunbeam">
+        <source src="resources/secretmessage0.mp3" type="audio/mp3">
     </audio>
-    <audio id="secretmessage">
-        <source src="resources/secretmessage.mp3" type="audio/mp3">
-    </audio>
-    
     <button id="prev-btn">
         <img class="prev glow" src="resources/button.png">
     </button>
@@ -38,7 +31,7 @@
             <div class="front coverpage">
                 <div id="f1" class="front-content">
                     <h1 class="book-title">Happy Birthday</h1>
-                    <a id="cake" onclick="playAudio('klee'); noshake('#cake');"  style="mix-blend-mode: multiply;">
+                    <a id="cake" style="mix-blend-mode: multiply;">
                         <img class="cover-img" src="resources/cake_animation.gif" alt="cake">
                     </a>
                     <h2 class="book-footer" onclick="playAudio('main_theme')"> To you, from Mark</h2>
@@ -46,12 +39,12 @@
             </div>
             <div class="back back_front">
                 <div id="b1" class="back-content">
-                    <h2 class="aud" id="aud1" onclick="noshake('#aud1')">To You, <a onclick="playAudio('zhongli')" style="cursor: pointer;">Friend</a></h2>
+                    <h2 class="aud" id="aud1" onclick="noshake('#aud1')">To You, <a onclick="playAudio('my_sunbeam')" style="cursor: pointer;">My Sunbeam</a></h2>
                     <div class="content">
-                        <p>The time has come where your heart has reached around its 700 millionth beat.
-                            Way to go! In the upcoming years of your 20s, I hope that the fates
-                            has weaved a prosperous life ahead. </p>
-                        <p> I present it to this card to you, as a gift and a <a onclick="playAudio('secretmessage')" style="cursor: pointer;">token of friendship</a></p>
+                        <p>The time has come where your heart, my love, has reached around its 766 millionth beat.
+                            Many has changed since your last birthday and this gift has been sentimental for 
+                            me as a monument for my love to you. </p>
+                        <p> I once again, present this card to you, but now as a token of my love for you, Charisse.</a></p>
                         
                     </div>
                 </div>
@@ -61,8 +54,7 @@
         <div id="p2" class="paper">
             <div class="front lastpage">
                 <div id="f2" class="front-content">
-                    <h1 id="f2">Find and Click 3 Shaking Objects!</h1>
-                    <h1 class="aud" id= "aud2" style= "cursor: pointer;"><a onclick="playAudio('ganyu') ; noshake('#aud2');"><img class="ganyu" src="resources/ganyu.gif"></a></h1>
+                    <h1 class="aud" id= "aud2" style= "cursor: pointer;"><a onclick="playAudio('klee') ; noshake('#aud2');"><img class="ganyu" src="resources/klee.gif"></a></h1>
                 </div>
             </div>
             <div class="back">
