@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
-    background-image: url("resources/background.png");
+    background-image: url("resources/sumeru_background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -230,7 +230,7 @@ button:focus {
     background-size: cover;
 }
 .lastpage {
-    background-image: url("resources/inazuma_background.jpg");
+    background-image: url("resources/sumeru.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
