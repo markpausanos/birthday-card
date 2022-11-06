@@ -70,7 +70,7 @@ function playAudio(x){
         return;
     }
     if(audio === message){
-        maintheme.volume = 0.7;
+        maintheme.volume = 0.1;
     }else{
         maintheme.volume = 0.5;
     }
